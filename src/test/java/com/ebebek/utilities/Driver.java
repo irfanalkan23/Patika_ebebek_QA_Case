@@ -20,7 +20,6 @@ public class Driver {
     We make WebDriver private, because we want to close access from outside the class
     We make it static because we will use it in a static method
      */
-//    private static WebDriver driver;    // value is null by default
 
     // this will create me the driver pool
     // and we already created the maven plugin for the Threads
@@ -63,10 +62,6 @@ public class Driver {
 
     }
 
-    //driver.quit() --> nosuchsession
-    //driver.close() -->
-
-    //try to create a method named closeDriver
     /*
     This method will make sure our driver value is always null after using quit() method
     */
