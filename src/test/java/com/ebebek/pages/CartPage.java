@@ -14,6 +14,4 @@ public class CartPage extends BasePage {
     @FindBy(xpath = "//span[text()=\"Alışverişi Tamamla\"]")
     public WebElement checkoutButton;
 
-
-
 }

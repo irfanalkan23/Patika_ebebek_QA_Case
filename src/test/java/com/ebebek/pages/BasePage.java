@@ -14,6 +14,4 @@ public class BasePage {
     @FindBy(id="txtSearchBox")
     public WebElement searchBox;
 
-
-
 }

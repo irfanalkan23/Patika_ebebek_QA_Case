@@ -40,9 +40,8 @@ public class BrowserUtils {
         Assert.assertEquals(Driver.getDriver().getTitle(), expectedTitle);
     }
 
-
     /**
-     * Clicks on an element using JavaScript     *
+     * Clicks on an element using JavaScript
      * @param element
      */
     public static void clickWithJS(WebElement element) {
@@ -51,7 +50,7 @@ public class BrowserUtils {
     }
 
     /**
-     * Performs a pause     *
+     * Performs a pause
      * @param seconds
      */
     public static void waitFor(int seconds) {
@@ -74,7 +73,7 @@ public class BrowserUtils {
     }
 
     /**
-     * Waits for element matching the locator to be clickable     *
+     * Waits for element matching the locator to be clickable
      * @param locator
      * @param timeout
      * @return
@@ -85,7 +84,7 @@ public class BrowserUtils {
     }
 
     /**
-     * Waits for the provided element to be visible on the page     *
+     * Waits for the provided element to be visible on the page
      * @param element
      * @param timeToWaitInSec
      * @return
@@ -96,7 +95,7 @@ public class BrowserUtils {
     }
 
     /**
-     * Waits for element matching the locator to be visible on the page     *
+     * Waits for element matching the locator to be visible on the page
      * @param locator
      * @param timeout
      * @return
@@ -107,7 +106,7 @@ public class BrowserUtils {
     }
 
     /**
-     * waits for backgrounds processes on the browser to complete     *
+     * waits for backgrounds processes on the browser to complete
      * @param timeOutInSeconds
      */
     public static void waitForPageToLoad(long timeOutInSeconds) {
@@ -125,7 +124,7 @@ public class BrowserUtils {
     }
 
     /**
-     * Verifies whether the element matching the provided locator is displayed on page     *
+     * Verifies whether the element matching the provided locator is displayed on page
      * @param by
      * @throws AssertionError if the element matching the provided locator is not found or not displayed
      */
@@ -139,7 +138,7 @@ public class BrowserUtils {
     }
 
     /**
-     * Verifies whether the element matching the provided locator is NOT displayed on page     *
+     * Verifies whether the element matching the provided locator is NOT displayed on page
      * @param by
      * @throws AssertionError the element matching the provided locator is displayed
      */
@@ -152,7 +151,7 @@ public class BrowserUtils {
     }
 
     /**
-     * Verifies whether the element is displayed on page     *
+     * Verifies whether the element is displayed on page
      * @param element
      * @throws AssertionError if the element is not found or not displayed
      */
@@ -166,7 +165,7 @@ public class BrowserUtils {
     }
 
     /**
-     * Waits for element to be not stale     *
+     * Waits for element to be not stale
      * @param element
      */
     public static void waitForStaleElement(WebElement element) {
@@ -253,7 +252,7 @@ public class BrowserUtils {
     }
 
     /**
-     * Moves the mouse to given element     *
+     * Moves the mouse to given element
      * @param element on which to hover
      */
     public static void hover(WebElement element) {
@@ -262,7 +261,7 @@ public class BrowserUtils {
     }
 
     /**
-     * return a list of string from a list of elements     *
+     * return a list of string from a list of elements
      * @param list of webelements
      * @return list of string
      */
@@ -275,7 +274,7 @@ public class BrowserUtils {
     }
 
     /**
-     * Extracts text from list of elements matching the provided locator into new List<String>     *
+     * Extracts text from list of elements matching the provided locator into new List<String>
      * @param locator
      * @return list of strings
      */
@@ -291,7 +290,7 @@ public class BrowserUtils {
     }
 
     /**
-     * Scrolls down to an element using JavaScript     *
+     * Scrolls down to an element using JavaScript
      * @param element
      */
     public static void scrollToElement(WebElement element) {
@@ -299,7 +298,7 @@ public class BrowserUtils {
     }
 
     /**
-     * Performs double click action on an element     *
+     * Performs double click action on an element
      * @param element
      */
     public static void doubleClick(WebElement element) {

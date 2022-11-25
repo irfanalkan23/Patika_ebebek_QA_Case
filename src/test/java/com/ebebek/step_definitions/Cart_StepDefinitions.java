@@ -10,12 +10,9 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.java.en_old.Ac;
 import org.junit.Assert;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 
 
 public class Cart_StepDefinitions {
@@ -34,7 +31,6 @@ public class Cart_StepDefinitions {
         BrowserUtils.waitFor(5);
     }
 
-
     @And("user clicks the last product and sees the selected product in the product page")
     public void userClicksTheLastProductAndSeesTheSelectedProductInTheProductPage() {
         BrowserUtils.scrollPageBottom();
@@ -42,11 +38,15 @@ public class Cart_StepDefinitions {
         BrowserUtils.scrollPageBottom();
         BrowserUtils.waitFor(1);
         BrowserUtils.scrollPageBottom();
+        BrowserUtils.waitFor(1);
+        BrowserUtils.scrollPageBottom();
 
-        WebElement lastItem = productPage.searchResultLastItem;
+        int indexOfLastAvailableItem = productPage.listOfAddToCartItems_AddToCartButton.size();
+        WebElement lastItem = productPage.listOfAddToCartItems_ProductName.get(indexOfLastAvailableItem-1);     //index of item = size()-1
 
         String expectedName = lastItem.getText();
         BrowserUtils.verifyElementDisplayed(lastItem);
+
         BrowserUtils.clickWithJS(lastItem);
 
         String actualName = productPage.productPage_ProductName.getText();
