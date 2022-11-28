@@ -26,9 +26,6 @@ public class ProductPage extends BasePage {
     @FindBy(id="addToCartBtn")
     public WebElement addToCartButton;
 
-    @FindBy(xpath = "//p[text()=' Ürün Sepetinizde ']")
-    public WebElement productAddedToCartMessage;
-
     @FindBy(id="btnShowCart")
     public WebElement showCartButton;
 
