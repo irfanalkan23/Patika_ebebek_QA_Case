@@ -2,7 +2,6 @@ package com.ebebek.utilities;
 
 // In this class only general utility methods that are not related to some specific page
 
-import io.cucumber.java.en_old.Ac;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -18,24 +17,9 @@ import java.util.Set;
 public class BrowserUtils {
 
     /**
-     * Scroll down to the bottom of the page
+     * Accept a String "expectedTitle" and Assert if it is true
+     * @param expectedTitle
      */
-    public static void scrollPageBottom(){
-        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
-        js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
-    }
-
-    //Accept int (seconds) and execute Thread.sleep() for given duration
-    public static void sleep(int second){
-        second *= 1000;
-        try{
-            Thread.sleep(second);
-        }catch (InterruptedException e){
-
-        }
-    }
-
-    //Accept a String "expectedTitle" and Assert if it is true
     public static void verifyTitle(String expectedTitle){
         Assert.assertEquals(Driver.getDriver().getTitle(), expectedTitle);
     }
@@ -67,7 +51,7 @@ public class BrowserUtils {
      * @param timeout
      * @return
      */
-    public static WebElement waitForClickablility(WebElement element, int timeout) {
+    public static WebElement waitForClickability(WebElement element, int timeout) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeout);
         return wait.until(ExpectedConditions.elementToBeClickable(element));
     }
@@ -78,7 +62,7 @@ public class BrowserUtils {
      * @param timeout
      * @return
      */
-    public static WebElement waitForClickablility(By locator, int timeout) {
+    public static WebElement waitForClickability(By locator, int timeout) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeout);
         return wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
@@ -161,35 +145,6 @@ public class BrowserUtils {
         } catch (NoSuchElementException e) {
             e.printStackTrace();
             Assert.fail("Element not found: " + element);
-        }
-    }
-
-    /**
-     * Waits for element to be not stale
-     * @param element
-     */
-    public static void waitForStaleElement(WebElement element) {
-        int y = 0;
-        while (y <= 15) {
-            if (y == 1)
-                try {
-                    element.isDisplayed();
-                    break;
-                } catch (StaleElementReferenceException st) {
-                    y++;
-                    try {
-                        Thread.sleep(300);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                } catch (WebDriverException we) {
-                    y++;
-                    try {
-                        Thread.sleep(300);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                }
         }
     }
 
@@ -295,6 +250,14 @@ public class BrowserUtils {
      */
     public static void scrollToElement(WebElement element) {
         ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
+    }
+
+    /**
+     * Scroll down to the bottom of the page
+     */
+    public static void scrollPageBottom(){
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
     }
 
     /**

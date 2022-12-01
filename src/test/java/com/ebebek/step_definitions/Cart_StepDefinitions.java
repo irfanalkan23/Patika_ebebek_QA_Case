@@ -78,7 +78,7 @@ public class Cart_StepDefinitions {
 
     @And("user clicks Alışverişi Tamamla button")
     public void userClicksAlışverişiTamamlaButton() {
-        BrowserUtils.waitForClickablility(cartPage.checkoutButton,3);
+        BrowserUtils.waitForClickability(cartPage.checkoutButton,3);
         BrowserUtils.clickWithJS(cartPage.checkoutButton);
     }
 

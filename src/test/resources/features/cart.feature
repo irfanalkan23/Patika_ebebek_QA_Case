@@ -1,7 +1,7 @@
 Feature: Ebebek shopping cart functionality
 
   @wip
-  Scenario: Search a product, add to cart and verify the product in the cart
+  Scenario: Search a product, add to cart and verify user is directed to login page when user clicks the check out button
     Given user is at the ebebek home page
     When user types "kaşık maması" in the search box and clicks Enter
     And user clicks the last product and sees the selected product in the product page

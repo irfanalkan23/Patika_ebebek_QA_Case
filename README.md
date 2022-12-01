@@ -11,19 +11,24 @@ Selenium Webdriver ile aşağıdaki maddelerin gerçekleştirilmesi gerekmektedi
 * Alışverişi tamamla butonuna tıklanır.
 * Üye girişi ekranının açıldığı doğrulanır.
 
-## How to run the app?
-CukesRunner sınıfında, veya "Maven -> Lifecycle -> Test" ile çalıştırılabilir.
-
-## Test Report
-![img.png](img.png)
+## Cucumber Framework
+![img_1.png](framework.png)
 
 ## About the project
 * Java OOP ve inheritance prensipleri uygulandı.
 * Cucumber BDD ve Gherkin dili kullanıldı.
-* Page Object Model (POM) uygulandı.
-* Test case'ler cart.feature dosyasında Gherkin dili ile tanımlandı.
-* Cucumber framework içerisinde ConfigurationReader, Driver, Hooks kullanıldı.
+* Selenium webdriver ve JUnit assertions kullanıldı.
+* Page Object Model (POM) uygulandı, locator'lar "pages" package içerisinde tanımlandı.
+* Test case'ler "cart.feature" dosyasında Gherkin dili ile tanımlandı.
+* Cucumber framework içerisinde ConfigurationReader, Driver, Hooks, Features folder, StepDefinitions kullanıldı.
 * Maven build tool kullanıldı, pom.xml'de plugin ve dependency'ler tanımlandı.
+* Tekrarlayan metotlar "utilities" içerisinde oluşturuldu.
+
+## How to run the test?
+CukesRunner sınıfında, veya "Maven -> Lifecycle -> Test" ile çalıştırılabilir.
+
+## Test Report
+![img_2.png](testReport.png)
 
 ## Notes
 ebebek Java & QA & SAP Spartacus Practicum.
